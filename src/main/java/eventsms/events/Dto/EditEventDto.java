@@ -16,5 +16,7 @@ public class EditEventDto {
     private String eventOrganizer;
     private String eventDescription;
     private String eventCategory;
+    private String eventTicketsURL;
+    private String eventFlyer;
     
 }

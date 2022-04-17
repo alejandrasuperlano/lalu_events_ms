@@ -79,6 +79,8 @@ public class EventServiceImpl implements EventService {
                 eventDB.setEventOrganizer(eventDto.getEventOrganizer());
                 eventDB.setEventDescription(eventDto.getEventDescription());
                 eventDB.setEventCategory(eventDto.getEventCategory());
+                eventDB.setEventFlyer(eventDto.getEventFlyer());
+                eventDB.setEventTicketsURL(eventDto.getEventTicketsURL());
 
                 eventRepository.save(eventDB);
             } else {

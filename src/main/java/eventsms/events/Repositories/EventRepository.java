@@ -57,7 +57,13 @@ public interface EventRepository extends CrudRepository<EventModel, Long> {
             "                   e.event_city = :city" +
             "                   and" +
             "                   e.artist = :artist" +
-            "                   and e.event_date = :date",
+            "                   and " +
+            "                   DAY(e.event_date) = DAY(:date)" +
+            "                   and" +
+            "                   MONTH(e.event_date) = MONTH(:date)" +
+            "                   and" +
+            "                   YEAR(e.event_date) = YEAR(:date)" +
+            "                   and e.event_state = 'Active'",
             nativeQuery = true
     )
     EventModel searchByArtistAndCityAndLocationAndName(@Param("name") String name,

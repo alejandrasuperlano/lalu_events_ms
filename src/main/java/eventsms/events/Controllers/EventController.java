@@ -102,7 +102,7 @@ public class EventController {
             if (filter.equals("all")){
                 List<AllEventsDto> allEvents = eventService.listAllEvents();
                 if (allEvents != null){
-                    return new ResponseEntity(new Response("OK","The events availables are:",allEvents),
+                    return new ResponseEntity(new Response("OK","All the events are:",allEvents),
                             HttpStatus.OK);
                 } else {
                     return new ResponseEntity(new Response("OK","There's no events :(",null),

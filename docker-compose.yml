@@ -27,6 +27,7 @@ services:
       - 3306:3306
     # Define the user that have privilegies on DB and the root pw
     environment:
+      LANG: C.UTF-8
       MYSQL_ROOT_PASSWORD: Forever21ROOT*
       # This command was put on the Dockerfile of the database
       # MYSQL_DATABASE: lalu_events_db
